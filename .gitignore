@@ -1,0 +1,6 @@
+/.gradle/
+/bin/
+/test-output/
+/reports/
+/build/
+/.DS_Store

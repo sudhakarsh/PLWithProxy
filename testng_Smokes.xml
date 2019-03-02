@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<listeners>
+ <listener class-name="framework.utils.TestNGListener" />
+ </listeners>
+<test name ="Admin_Settings_Captcha_disable">
+   <groups>
+  <run>
+  <include name="Captcha"/>
+  <include name="Common"/>
+  	</run>
+  </groups>
+    <classes>
+    <class name="framework.test.TurnOffCaptcha_PartyLite"/>
+    </classes>
+  </test>
+  <test thread-count="3" name="Smokes" parallel="methods"> 
+   <groups>
+  <run>
+  <include name="Common"/>
+  <include name="Smokes"/>
+  </run>
+  </groups>
+   <classes>
+   
+   <class name="framework.test.Create_NewUserAccount_PartyLite"/>
+    <class name="framework.test.FindYourConsultant_ByPostCode_PartyLite"/>  
+    <class name="framework.test.CreatePartyContacts_PartyLite"/>  
+ 	<class name="framework.test.AddGuestsToParty_PartyLite" />
+	<class name="framework.test.LoggedInCustomerOrder_PartyLite" />
+	<class name="framework.test.GuestOrder_PartyLite" />
+	<class name="framework.test.GuestOrderApplyGC_PartyLite" />
+	<class name="framework.test.CreatePaperOrder_PartyLite" />
+	<class name="framework.test.CreatePartyPrevHost_NewAddress_PartyLite" />
+	<class name="framework.test.CreatePartyPrevHost_HostAddress_PartyLite" />
+	<class name="framework.test.CreatePartyPrevHost_PreviousAddress_PartyLite" />
+	<class name="framework.test.CreatePartyConsAsHost_NewAddress_PartyLite" />
+	<class name="framework.test.CreatePartyConsAsHost_PreviousAddress_PartyLite" />
+	<class name="framework.test.CreatePartyConsAsHost_HostAddress_PartyLite" />
+	<class name="framework.test.CreatePartyNewHost_PartyLite" />
+	<class name="framework.test.SmokeTestNine_PartyLite" />
+			
+	</classes>
+  </test>
+  <test name ="Admin_Settings_Captcha_enable">
+   <groups>
+  <run>
+  <include name="Captcha"/>
+  <include name="Common"/>
+  	</run>
+  </groups>
+    <classes>
+    <class name="framework.test.TurnOnCaptcha_PartyLite" />
+    </classes>
+  </test>
+ <!-- Test -->
+</suite> <!-- Suite -->
